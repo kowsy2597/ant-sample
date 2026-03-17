@@ -21,11 +21,10 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - run name: Build with Ant
-    - run: ant -noinput -buildfile build.xml
+    - name: Build with Ant
+      run: ant -noinput -buildfile build.xml
     - run: ant -p
     - run: ant build
     - run: ant run
     - run: ant doc
     - run: ant clean
-      
